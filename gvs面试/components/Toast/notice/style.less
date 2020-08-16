@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@prefixCls: "notice";
+
+// Notice
+// .@{prefixCls} {
+.notice {
+  position: absolute;
+  box-sizing: border-box;
+  left: 50%;
+  top: 60%;
+  margin: 0;
+  width: 100%;
+  padding: 0.2rem 0.3rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.28rem;
+  line-height: 0.42rem;
+  color: #fff;
+  z-index: 1110;
+
+  transition: all 0.3s;
+  transform: translate3D(-50%, -50%, 0) scale(1, 1);
+
+  &.leave {
+    transform: translate3D(-50%, -100%, 0);
+    opacity: 0;
+  }
+
+  // 正常提示
+  &.info {
+    animation: Flop 0.5s linear;
+  }
+
+  // 成功提示
+  &.success {
+    animation: BombIn 0.3s;
+  }
+
+  // 警告提示⚠️
+  &.warning {
+    animation: slideInFromBottom 0.3s;
+  }
+
+  // 错误提示
+  &.error {
+    animation: shake 0.5s;
+  }
+
+  .@{prefixCls}-icon {
+    padding: 20px;
+    font-size: 80px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .@{prefixCls}-content {
+    font-size: 0.21rem;
+    text-align: center;
+    color: #fff;
+  }
+}

@@ -1,0 +1,37 @@
+.countdown-bind {
+  .countText {
+    font-size: 0.28rem !important;
+    color: #333333 !important;
+  }
+
+  // 不要省略号   lyk    省略号的代码注释了放在下面
+  .verification-code {
+    display: inline-block;
+    border-radius: 0.08rem;
+    transform: translateY(8%);
+    font-size: 0.28rem !important;
+    color: #22a696;
+    width: 100%;
+    text-align: right;
+    height: 22px;
+    line-height: 22px;
+  }
+  .am-list-item .am-input-extra {
+    max-height: none;
+    line-height: normal;
+  }
+  .verification-code.active {
+    background-color: transparent;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .am-list-item .am-input-control {
+    flex: none !important;
+    width: 55% !important;
+  }
+  .am-list-item .am-input-extra {
+    width: 45% !important;
+    text-align: right !important;
+  }
+}
