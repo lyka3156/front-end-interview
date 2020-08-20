@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* 
+      1. 居中div 
+      margin: 0 auto;
+      */
+      #app1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        /* 居中代码 */
+        margin: 0 auto;
+      }
+      /* 
+      2. 居中浮动元素
+      position: absolute;
+      left，top 50% 
+      margin 各自负宽，高的一半
+     */
+      #app2 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        /* 浮动元素 */
+        float: left;
+        /* 居中代码 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -50px 0 0 -50px;
+      }
+      /* 
+      3. 居中定位元素 
+      position: absolute;
+      left，right 0
+      margin 0 auto
+      */
+      #app3 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        /* 定位元素 */
+        position: absolute;
+        /* 居中代码 */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      /* 
+      4. 使用flex居中
+      */
+      #flex {
+        width: 100%;
+        height: 200px;
+        border: 1px solid;
+        /* flex布局 */
+        display: flex;
+        /* 居中代码 */
+        /* 水平居中 */
+        justify-content: center;
+        /* 垂直居中 */
+        align-items: center;
+      }
+      #flex div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="flex">
+      <div></div>
+    </div>
+  </body>
+</html>
